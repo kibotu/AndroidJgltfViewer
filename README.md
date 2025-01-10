@@ -1,4 +1,4 @@
-# AndroidJgltfViewer
+# androidjgltfviewer
 
 Android port of jgltfViewer with native OpenGL ES bindings
 
@@ -37,7 +37,7 @@ This Android port of jglTF library supports most of the features provided in ori
 Open Android Studio and checkout source from this repository.
 
 ```
-File >> New >> Project from Version Control >> Git >> https://github.com/mikikg/AndroidJgltfViewer
+File >> New >> Project from Version Control >> Git >> https://github.com/mikikg/androidjgltfviewer
 ```
 
 Wait for project synchronization and then build/run on your Android device or X86 emulator.

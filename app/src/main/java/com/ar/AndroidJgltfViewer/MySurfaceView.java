@@ -1,4 +1,4 @@
-package com.ar.AndroidJgltfViewer;
+package com.ar.androidjgltfviewer;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
@@ -86,7 +86,7 @@ class MySurfaceView extends GLSurfaceView {
 
     public void loadNextGltf() {
 
-        String srvBase = "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/"; //remote
+        String srvBase = "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/refs/heads/main/2.0/"; //remote
 
         String uriStr[]= {
                 "Duck/glTF/Duck.gltf",
@@ -164,7 +164,8 @@ class MySurfaceView extends GLSurfaceView {
 
         try {
             //try to load gltf
-            mRenderer.addGM(r.read(new URI(srvBase + uriStr[modelCNT])));
+//            mRenderer.addGM(r.read(new URI(srvBase + uriStr[modelCNT])));
+            mRenderer.addGM(r.read(new URI("https://github.com/kibotu/glTF-Renderer/raw/refs/heads/main/app/src/main/assets/10511_model.glb")));
         } catch (IOException e1) {
             //Toast message on IOException
             glb.actv.runOnUiThread(new Runnable() {

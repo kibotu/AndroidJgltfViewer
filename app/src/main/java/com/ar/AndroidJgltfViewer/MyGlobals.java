@@ -1,4 +1,4 @@
-package com.ar.AndroidJgltfViewer;
+package com.ar.androidjgltfviewer;
 
 import android.app.Activity;
 

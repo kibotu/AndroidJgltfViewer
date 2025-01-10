@@ -1,7 +1,8 @@
-package com.ar.AndroidJgltfViewer;
+package com.ar.androidjgltfviewer;
 
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import androidx.core.view.KeyEventDispatcher;
@@ -66,6 +67,15 @@ class MyRenderer implements GLSurfaceView.Renderer {
 
     public void myTouchActionRotate(float x, float y) {
         ((MyExtCamera) extCam).rotateMatrix(x,y); //
+
+        DisplayMetrics metrics = MyGlobals.actv.getResources().getDisplayMetrics();
+        float density = metrics.density;
+
+        // Convert x and y from pixels to dp
+        float xDp = x / density;
+        float yDp = y / density;
+
+        ((MyExtCamera) extCam).rotateMatrix(xDp, yDp);
     }
 
     public void myTouchActionMove(float x, float y) {

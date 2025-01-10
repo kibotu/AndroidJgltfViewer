@@ -1,4 +1,4 @@
-package com.ar.AndroidJgltfViewer;
+package com.ar.androidjgltfviewer;
 
 import de.javagl.jgltf.viewer.ExternalCamera;
 
